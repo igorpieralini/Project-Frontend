@@ -1,0 +1,23 @@
+<h2>Funcionários</h2>
+
+<a routerLink="/funcionarios/novo">Novo Funcionário</a>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Cargo</th>
+    <th>Email</th>
+    <th>Ações</th>
+  </tr>
+
+  <tr *ngFor="let f of funcionarios">
+    <td>{{ f.id }}</td>
+    <td>{{ f.nome }}</td>
+    <td>{{ f.cargo }}</td>
+    <td>{{ f.email }}</td>
+    <td>
+      <a [routerLink]="['/funcionarios/editar', f.id]">Editar</a>
+    </td>
+  </tr>
+</table>
