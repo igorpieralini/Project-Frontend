@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+   selector: 'app-login',
+   standalone: true,
+   imports: [CommonModule, FormsModule, HttpClientModule],
+   templateUrl: './login.component.html',
+   styleUrls: ['./login.component.css', '../../../../public/styles/theme.css'],
+   encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent {
   email = '';

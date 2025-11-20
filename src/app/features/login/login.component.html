@@ -1,10 +1,43 @@
-<div class="login-container">
-  <h2>Login</h2>
+<!DOCTYPE html>
 
-  <input [(ngModel)]="email" placeholder="Email" />
-  <input [(ngModel)]="senha" placeholder="Senha" type="password" />
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Project</title>
+  <link rel="stylesheet" href="login.component.css">
+  <link rel="icon" type="image/png" href="../../../../public/favicon.ico">
+</head>
+<body>
 
-  <button (click)="entrar()">Entrar</button>
+<main>
+  <section class="login-wrapper">
+    <div class="login-container">
+      <h2>Login</h2>
 
-  <p class="erro" *ngIf="erro">{{ erro }}</p>
-</div>
+      <form (ngSubmit)="entrar()">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" [(ngModel)]="email" name="email" placeholder="Digite seu email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" [(ngModel)]="senha" name="senha" placeholder="Digite sua senha" required />
+        </div>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="erro" *ngIf="erro">{{ erro }}</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Sistema de Gestão. Todos os direitos reservados.</p>
+</footer>
+
+
+</body>
+</html>
