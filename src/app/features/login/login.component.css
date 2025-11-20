@@ -1,12 +1,11 @@
 @import url('../../../../public/styles/theme.css');
 
-/* Garantir que o fundo ocupe 100% da tela e centralizar o conteúdo */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--secondary-color);
-    font-family: Arial, sans-serif; /* opcional */
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;

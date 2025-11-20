@@ -11,7 +11,7 @@ import { ViewEncapsulation } from '@angular/core';
    imports: [CommonModule, FormsModule, HttpClientModule],
    templateUrl: './login.component.html',
    styleUrls: ['./login.component.css', '../../../../public/styles/theme.css'],
-   encapsulation: ViewEncapsulation.None  // Agora funciona
+   encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent {
   email = '';
