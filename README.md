@@ -1,59 +1,80 @@
-# Frontend
+# Angular Frontend Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+Este projeto foi gerado utilizando o [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.10. O objetivo do projeto é **estudo de Angular e Spring Boot (Java)**, criando um sistema simples de integração com Backend e Frontend separados, **utilizando MySQL como banco de dados**.
 
-## Development server
+O sistema inclui:
 
-To start a local development server, run:
+* Sistema de Login
+* Sistema de consulta de funcionários
+* Sistema de adicionar funcionários
+* Sistema de remoção de funcionários
+
+---
+
+## 🚀 Iniciando o Servidor de Desenvolvimento / Build do Projeto
+
+Para rodar o projeto localmente e acompanhar as alterações em tempo real:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Em seguida, abra seu navegador em:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Para gerar o build de produção otimizado para performance e tamanho mínimo:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos compilados serão armazenados na pasta `dist/`.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🏗️ Estrutura do Projeto
 
-```bash
-ng test
+Segue a estrutura principal do frontend:
+
+```
+frontend/
+ ├─ .angular/
+ ├─ node_modules/
+ ├─ public/
+ │   ├─ styles/
+ │   └─ favicon.ico
+ └─ src/
+     ├─ app/
+     │   ├─ core/
+     │   ├─ features/
+     │   └─ shared/
+     ├─ environments/
+     └─ index.html
 ```
 
-## Running end-to-end tests
+Essa organização permite separar claramente módulos centrais (`core`), funcionalidades (`features`) e componentes compartilhados (`shared`).
 
-For end-to-end (e2e) testing, run:
+---
+
+## 💻 Rodando o Projeto com Git
+
+Para clonar e executar este projeto, utilize os comandos abaixo:
 
 ```bash
-ng e2e
+# Clonar o repositório
+git clone https://github.com/igorpieralini/Project-Frontend.git
+
+# Entrar na pasta do projeto
+cd Project-Frontend
+
+# Instalar dependências
+npm install
+
+# Rodar o servidor de desenvolvimento
+ng serve
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desenvolvedor: **Igor Pieralini**
