@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './core/layout/layout.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { LoginComponent } from './features/login/login.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-
   {
     path: '',
     component: LayoutComponent,
@@ -30,7 +30,6 @@ export const routes: Routes = [
       }
     ]
   },
-
   {
     path: 'login',
     loadComponent: () =>
