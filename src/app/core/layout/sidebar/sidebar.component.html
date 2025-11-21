@@ -1,4 +1,16 @@
-<nav class="sidebar">
-  <a routerLink="/funcionarios">Funcionários</a>
-  <a routerLink="/funcionarios/novo">Novo Funcionário</a>
-</nav>
+<div class="sidebar" [class.fechada]="!sidebarAberta">
+
+  <button class="toggle-btn" (click)="toggleSidebar()">
+    ☰
+  </button>
+
+  <nav *ngIf="sidebarAberta" class="menu">
+    <a routerLink="/funcionarios/list">Lista de Funcionários</a>
+    <a routerLink="/funcionarios/form">Cadastrar Funcionário</a>
+  </nav>
+
+  <div *ngIf="sidebarAberta" class="logout">
+    <button>Sair</button>
+  </div>
+
+</div>

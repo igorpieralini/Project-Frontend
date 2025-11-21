@@ -11,7 +11,7 @@ import { FuncionariosService } from '../funcionarios.service';
   templateUrl: './funcionarios-form.component.html',
   styleUrls: ['./funcionarios-form.component.css']
 })
-export class FuncionariosFormComponent implements OnInit {
+export class FuncionariosFormComponent {
 
   funcionario: any = {
     nome: '',
@@ -27,23 +27,4 @@ export class FuncionariosFormComponent implements OnInit {
     private service: FuncionariosService
   ) {}
 
-  ngOnInit() {
-    this.id = Number(this.route.snapshot.paramMap.get('id'));
-
-    if (this.id) {
-      this.service.buscar(this.id).subscribe((res: any) => this.funcionario = res);
-    }
-  }
-
-  salvar() {
-    if (this.id) {
-      this.service.atualizar(this.id, this.funcionario).subscribe(() =>
-        this.router.navigate(['/funcionarios'])
-      );
-    } else {
-      this.service.cadastrar(this.funcionario).subscribe(() =>
-        this.router.navigate(['/funcionarios'])
-      );
-    }
-  }
 }

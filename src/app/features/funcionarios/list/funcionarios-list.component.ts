@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FuncionariosService, Funcionario } from '../funcionarios.service';
+import { FuncionariosService } from '../funcionarios.service';
+import { Funcionario } from '../funcionarios.interface';
 
 @Component({
   selector: 'app-funcionarios-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule],
   templateUrl: './funcionarios-list.component.html',
-  styleUrls: ['./funcionarios-list.component.css']
+  styleUrls: ['./funcionarios-list.component.css', '../../../../../public/styles/theme.css']
 })
 export class FuncionariosListComponent {
 
@@ -17,6 +17,6 @@ export class FuncionariosListComponent {
   constructor(private service: FuncionariosService) {}
 
   ngOnInit() {
-    this.service.listar().subscribe((res: Funcionario[]) => this.funcionarios = res);
+    this.service.listar().subscribe(res => this.funcionarios = res);
   }
 }

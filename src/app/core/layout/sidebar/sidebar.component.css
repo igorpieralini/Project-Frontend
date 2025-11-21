@@ -1,0 +1,52 @@
+@import url('../../../../../public/styles/theme.css');
+
+.sidebar {
+  width: 230px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  height: 100vh;
+  padding-top: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.sidebar.fechada {
+  width: 60px;
+}
+
+.toggle-btn {
+  background: none;
+  color: var(--text-primary);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.menu a {
+  color: var(--text-primary);
+  padding: 12px;
+  display: block;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.menu a:hover {
+  background: var(--bg-hover);
+}
+
+.logout button {
+  background: var(--danger);
+  border: none;
+  color: var(--text-primary);
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout button:hover {
+  background: var(--danger-hover);
+}

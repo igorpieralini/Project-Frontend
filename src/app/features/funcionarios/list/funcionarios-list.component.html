@@ -1,23 +1,51 @@
-<h2>Funcionários</h2>
-
-<a routerLink="/funcionarios/novo">Novo Funcionário</a>
+<h2>Lista de Funcionários</h2>
 
 <table>
+  <thead>
   <tr>
     <th>ID</th>
     <th>Nome</th>
     <th>Cargo</th>
+    <th>CPF</th>
+    <th>RG</th>
+    <th>Data Nasc.</th>
     <th>Email</th>
-    <th>Ações</th>
+    <th>Telefone</th>
+    <th>Salário</th>
+    <th>Benefícios</th>
+    <th>Formação</th>
+    <th>Cursos</th>
+    <th>Contratação</th>
+    <th>Demissão</th>
+    <th>Tipo Contrato</th>
+    <th>Endereço</th>
+    <th>Cidade</th>
+    <th>Estado</th>
+    <th>CEP</th>
   </tr>
+  </thead>
 
+  <tbody>
   <tr *ngFor="let f of funcionarios">
     <td>{{ f.id }}</td>
     <td>{{ f.nome }}</td>
     <td>{{ f.cargo }}</td>
+    <td>{{ f.cpf }}</td>
+    <td>{{ f.rg }}</td>
+    <td>{{ f.dataNascimento }}</td>
     <td>{{ f.email }}</td>
-    <td>
-      <a [routerLink]="['/funcionarios/editar', f.id]">Editar</a>
-    </td>
+    <td>{{ f.telefone }}</td>
+    <td>{{ f.salario }}</td>
+    <td>{{ f.beneficios }}</td>
+    <td>{{ f.formacao }}</td>
+    <td>{{ f.cursos }}</td>
+    <td>{{ f.dataContratacao }}</td>
+    <td>{{ f.dataDemissao }}</td>
+    <td>{{ f.tipoContrato }}</td>
+    <td>{{ f.endereco }}</td>
+    <td>{{ f.cidade }}</td>
+    <td>{{ f.estado }}</td>
+    <td>{{ f.cep }}</td>
   </tr>
+  </tbody>
 </table>
