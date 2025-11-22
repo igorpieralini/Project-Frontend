@@ -20,11 +20,13 @@ html, body{
 .main-content {
     display: flex;
     flex: 1;
-    width: 96.85vw;
+    width: 96.96vw;
     margin-left: 1.1vw;
+    height: 91vh;
     margin-top: 4vw;
     border-radius: 12px;
-    overflow-y: auto;
+    overflow: hidden;
     transition: margin-left 0.45s ease, width 0.45s ease;
     color: var(--text-primary);
 }
+

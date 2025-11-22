@@ -13,8 +13,8 @@ import { TemaService } from '../../../services/tema.service';
   styleUrls: ['./funcionarios-list.component.css']
 })
 export class FuncionariosListComponent {
-
   funcionarios: Funcionario[] = [];
+  sidebarAberta: boolean = true;
 
   constructor(
     private service: FuncionariosService,
@@ -23,14 +23,16 @@ export class FuncionariosListComponent {
   ) {}
 
   ngOnInit(): void {
+    this.service.aberta$.subscribe(valor => {
+      this.sidebarAberta = valor;
+    });
+
+    this.service.listar().subscribe(res => this.funcionarios = res);
+
     const temaSalvo = localStorage.getItem('theme') || 'white';
     this.temaService.setTema(temaSalvo);
 
     const idiomaSalvo = localStorage.getItem('idioma') || 'pt-br';
     this.idiomaService.carregarIdioma(idiomaSalvo);
-
-    this.service.listar().subscribe((res) => {
-      this.funcionarios = res;
-    });
   }
 }
