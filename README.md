@@ -1,34 +1,34 @@
 # Angular Frontend Project
 
-Este projeto foi gerado utilizando o [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.10. O objetivo do projeto é **estudo de Angular e Spring Boot (Java)**, criando um sistema simples de integração com Backend e Frontend separados, **utilizando MySQL como banco de dados**.
+Este projeto foi gerado utilizando o [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.10. O objetivo do projeto é **estudo de Angular e Spring Boot (Java)**, criando um sistema completo com **Frontend e Backend separados**, **integrado com MySQL no backend**.
 
 O sistema inclui:
 
-* Sistema de Login
-* Sistema de consulta de funcionários
-* Sistema de adicionar funcionários
-* Sistema de remoção de funcionários
+* Sistema de **Login** de usuários.
+* Sistema de **consulta/listagem de funcionários**.
+* Sistema de **adicionar, atualizar e remover funcionários**.
+* Suporte a **Tema** (claro/escuro) e **Idioma** (multi-idioma).
 
 ---
 
 ## 🚀 Iniciando o Servidor de Desenvolvimento / Build do Projeto
 
-Para rodar o projeto localmente e acompanhar as alterações em tempo real:
+Para rodar o projeto localmente e acompanhar alterações em tempo real:
 
 ```bash
 ng serve
 ```
 
-Em seguida, abra seu navegador em:
+Em seguida, abra o navegador em:
 
 ```
 http://localhost:4200/
 ```
 
-Para gerar o build de produção otimizado para performance e tamanho mínimo:
+Para gerar o build de produção otimizado:
 
 ```bash
-ng build
+ng build --prod
 ```
 
 Os arquivos compilados serão armazenados na pasta `dist/`.
@@ -36,8 +36,6 @@ Os arquivos compilados serão armazenados na pasta `dist/`.
 ---
 
 ## 🏗️ Estrutura do Projeto
-
-Segue a estrutura principal do frontend:
 
 ```
 frontend/
@@ -48,20 +46,49 @@ frontend/
  │   └─ favicon.ico
  └─ src/
      ├─ app/
-     │   ├─ core/
-     │   ├─ features/
-     │   └─ shared/
-     ├─ environments/
+     │   ├─ core/                 # Módulos centrais (layout, interceptors, guards, services globais)
+     │   │   ├─ layout/
+     │   │   ├─ services/
+     │   │   └─ core.module.ts
+     │   ├─ features/             # Funcionalidades específicas (ex: Funcionarios, Login)
+     │   │   ├─ funcionarios/
+     │   │   │   ├─ components/   # Componentes de listagem, cadastro, edição
+     │   │   │   ├─ services/     # Serviço para integração com backend
+     │   │   │   └─ funcionarios.module.ts
+     │   │   └─ login/
+     │   │       ├─ components/   # Componentes de login e autenticação
+     │   │       └─ login.module.ts
+     │   └─ shared/                # Componentes e utilitários compartilhados (botões, modais, pipes, diretivas)
+     ├─ environments/             # Configurações de ambiente (dev, prod)
      └─ index.html
 ```
 
-Essa organização permite separar claramente módulos centrais (`core`), funcionalidades (`features`) e componentes compartilhados (`shared`).
+Esta estrutura permite separar claramente **módulos centrais, funcionalidades específicas e componentes compartilhados**, facilitando manutenção, escalabilidade e reaproveitamento de código.
 
 ---
 
-## 💻 Rodando o Projeto com Git
+## 💻 Funcionalidades Detalhadas
 
-Para clonar e executar este projeto, utilize os comandos abaixo:
+### Funcionários
+
+* **Listagem**: exibe todos os funcionários do backend, atualizando em tempo real.
+* **Adicionar funcionário**: formulário integrado com backend para criar novos registros.
+* **Atualizar funcionário**: editar dados de um funcionário existente.
+* **Remover funcionário**: excluir funcionários pelo ID.
+
+### Personalização
+
+* **Tema**: suporte a modos claro e escuro, configuráveis pelo usuário.
+* **Idioma**: suporte a múltiplos idiomas, podendo alternar entre português e inglês.
+
+### Integração com Backend
+
+* Todas as operações de CRUD utilizam **HttpClient** para comunicação com o backend Spring Boot (`http://localhost:8080`).
+* Uso de **BehaviorSubject** para gerenciar estado global (ex: sidebar aberta/fechada).
+
+---
+
+## 🔧 Rodando com Git
 
 ```bash
 # Clonar o repositório
@@ -77,4 +104,8 @@ npm install
 ng serve
 ```
 
+---
+
 Desenvolvedor: **Igor Pieralini**
+Tecnologias: **Angular 20, TypeScript, HTML, CSS, RxJS, HttpClient**
+Integração: **Spring Boot (Java) + MySQL**
