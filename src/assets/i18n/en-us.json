@@ -1,0 +1,42 @@
+{
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "button": "Enter",
+    "error": "Incorrect email or password."
+  },
+  "menu": {
+    "employees_list": "Employees List",
+    "employees_new": "New Employee",
+    "language": "Language",
+    "theme": "Theme",
+    "logout": "Logout",
+    "project_name": "PROJECT"
+  },
+  "employees": {
+    "title": "Employees List",
+    "id": "ID",
+    "name": "Name",
+    "role": "Position",
+    "cpf": "CPF",
+    "rg": "RG",
+    "birth": "Birth Date",
+    "email": "Email",
+    "phone": "Phone",
+    "salary": "Salary",
+    "benefits": "Benefits",
+    "education": "Education",
+    "courses": "Courses",
+    "hiring": "Hiring Date",
+    "firing": "Termination Date",
+    "contract_type": "Contract Type",
+    "address": "Address",
+    "city": "City",
+    "state": "State",
+    "cep": "Postal Code"
+  },
+  "footer": {
+    "text": "2025 Management System. All rights reserved."
+  }
+}

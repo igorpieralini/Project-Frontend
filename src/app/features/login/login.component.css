@@ -1,10 +1,8 @@
-@import url('../../../../public/styles/theme.css');
-
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -20,23 +18,25 @@ html, body {
 }
 
 .login-container {
-    background-color: var(--secondary-color);
+    background-color: var(--card-bg);
     padding: 2.5rem 2rem;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.55);
     width: 25vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
 .login-container:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.8);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
 }
 
 .login-container h2 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--primary-color);
+    font-weight: 700;
 }
 
 .form-group {
@@ -51,25 +51,25 @@ html, body {
 }
 
 .form-group input {
-     width: 94%;
+    width: 94%;
     padding: 0.65rem 0.75rem;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 1rem;
-    background-color: var(--button-color);
+    background-color: var(--input-background-color);
     color: var(--text-color);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input::placeholder {
-    color: var(--text-color);
-    opacity: 0.6;
+    color: var(--placeholder-color);
+    opacity: 0.7;
 }
 
 .form-group input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 6px rgba(30, 144, 255, 0.4);
+    box-shadow: 0 0 6px rgba(154, 107, 255, 0.35);
 }
 
 button {
@@ -82,7 +82,7 @@ button {
     border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.25s ease, transform 0.2s ease;
 }
 
 button:hover {
@@ -101,5 +101,5 @@ footer {
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
-    color: var(--text-color);
+    color: var(--text-secondary);
 }

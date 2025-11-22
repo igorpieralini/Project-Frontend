@@ -1,43 +1,23 @@
-<!DOCTYPE html>
-
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Project</title>
-  <link rel="stylesheet" href="login.component.css">
-  <link rel="icon" type="image/png" href="../../../../public/favicon.ico">
-</head>
-<body>
-
-<main>
+<main *ngIf="idiomaService.textos$ | async as textos">
   <section class="login-wrapper">
     <div class="login-container">
-      <h2>Login</h2>
+      <h2>{{ textos.login.title }}</h2>
 
       <form (ngSubmit)="entrar()">
         <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" type="email" [(ngModel)]="email" name="email" placeholder="Digite seu email" required />
+          <label>{{ textos.login.email }}</label>
+          <input type="email" [(ngModel)]="email" name="email" required />
         </div>
 
         <div class="form-group">
-          <label for="senha">Senha</label>
-          <input id="senha" type="password" [(ngModel)]="senha" name="senha" placeholder="Digite sua senha" required />
+          <label>{{ textos.login.password }}</label>
+          <input type="password" [(ngModel)]="senha" name="senha" required />
         </div>
 
-        <button type="submit">Entrar</button>
+        <button type="submit">{{ textos.login.button }}</button>
       </form>
 
-      <p class="erro" *ngIf="erro">{{ erro }}</p>
+      <p class="erro" *ngIf="erro">{{ textos.login.error }}</p>
     </div>
   </section>
 </main>
-
-<footer>
-  <p>&copy; 2025 Sistema de Gestão. Todos os direitos reservados.</p>
-</footer>
-
-
-</body>
-</html>

@@ -1,23 +1,55 @@
-<h2>Funcionários</h2>
+<div *ngIf="idiomaService.textos$ | async as textos">
 
-<a routerLink="/funcionarios/novo">Novo Funcionário</a>
+  <h2>{{ textos.employees.title }}</h2>
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Nome</th>
-    <th>Cargo</th>
-    <th>Email</th>
-    <th>Ações</th>
-  </tr>
+  <table>
+    <thead>
+    <tr>
+      <th>{{ textos.employees.id }}</th>
+      <th>{{ textos.employees.name }}</th>
+      <th>{{ textos.employees.role }}</th>
+      <th>{{ textos.employees.cpf }}</th>
+      <th>{{ textos.employees.rg }}</th>
+      <th>{{ textos.employees.birth }}</th>
+      <th>{{ textos.employees.email }}</th>
+      <th>{{ textos.employees.phone }}</th>
+      <th>{{ textos.employees.salary }}</th>
+      <th>{{ textos.employees.benefits }}</th>
+      <th>{{ textos.employees.education }}</th>
+      <th>{{ textos.employees.courses }}</th>
+      <th>{{ textos.employees.hiring }}</th>
+      <th>{{ textos.employees.firing }}</th>
+      <th>{{ textos.employees.contract_type }}</th>
+      <th>{{ textos.employees.address }}</th>
+      <th>{{ textos.employees.city }}</th>
+      <th>{{ textos.employees.state }}</th>
+      <th>{{ textos.employees.cep }}</th>
+    </tr>
+    </thead>
 
-  <tr *ngFor="let f of funcionarios">
-    <td>{{ f.id }}</td>
-    <td>{{ f.nome }}</td>
-    <td>{{ f.cargo }}</td>
-    <td>{{ f.email }}</td>
-    <td>
-      <a [routerLink]="['/funcionarios/editar', f.id]">Editar</a>
-    </td>
-  </tr>
-</table>
+    <tbody>
+    <tr *ngFor="let f of funcionarios">
+      <td>{{ f.id }}</td>
+      <td>{{ f.nome }}</td>
+      <td>{{ f.cargo }}</td>
+      <td>{{ f.cpf }}</td>
+      <td>{{ f.rg }}</td>
+      <td>{{ f.dataNascimento }}</td>
+      <td>{{ f.email }}</td>
+      <td>{{ f.telefone }}</td>
+      <td>{{ f.salario }}</td>
+      <td>{{ f.beneficios }}</td>
+      <td>{{ f.formacao }}</td>
+      <td>{{ f.cursos }}</td>
+      <td>{{ f.dataContratacao }}</td>
+      <td>{{ f.dataDemissao }}</td>
+      <td>{{ f.tipoContrato }}</td>
+      <td>{{ f.endereco }}</td>
+      <td>{{ f.cidade }}</td>
+      <td>{{ f.estado }}</td>
+      <td>{{ f.cep }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,42 @@
+{
+  "login": {
+    "title": "Iniciar Sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "button": "Entrar",
+    "error": "Correo o contraseña incorrectos."
+  },
+  "menu": {
+    "employees_list": "Lista de Empleados",
+    "employees_new": "Registrar Empleado",
+    "language": "Idioma",
+    "theme": "Tema",
+    "logout": "Salir",
+    "project_name": "PROJECT"
+  },
+  "employees": {
+    "title": "Lista de Empleados",
+    "id": "ID",
+    "name": "Nombre",
+    "role": "Puesto",
+    "cpf": "CPF",
+    "rg": "RG",
+    "birth": "Fecha de Nacimiento",
+    "email": "Email",
+    "phone": "Teléfono",
+    "salary": "Salario",
+    "benefits": "Beneficios",
+    "education": "Formación",
+    "courses": "Cursos",
+    "hiring": "Fecha de Contratación",
+    "firing": "Fecha de Despido",
+    "contract_type": "Tipo de Contrato",
+    "address": "Dirección",
+    "city": "Ciudad",
+    "state": "Provincia",
+    "cep": "Código Postal"
+  },
+  "footer": {
+    "text": "2025 Sistema de Gestión. Todos los derechos reservados."
+  }
+}
