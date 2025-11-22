@@ -1,3 +1,4 @@
-<header class="header">
-  PROJECT
+<header class="header" *ngIf="idiomaService.textos$ | async as textos">
+  <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+  <span class="project-name">{{ textos.menu.project_name }}</span>
 </header>

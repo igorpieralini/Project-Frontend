@@ -13,19 +13,23 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+
             "browser": "src/main.ts",
+            "styles": [
+              "src/styles/theme.css",
+              "src/styles.css"
+            ],
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
-            ],
-            "styles": [
-              "src/styles.css"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -85,9 +89,6 @@
                 "glob": "**/*",
                 "input": "public"
               }
-            ],
-            "styles": [
-              "src/styles.css"
             ]
           }
         }

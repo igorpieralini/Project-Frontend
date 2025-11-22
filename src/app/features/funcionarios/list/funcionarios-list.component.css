@@ -1,1 +1,59 @@
-@import url('../../../../../public/styles/theme.css');
+html, body{
+   background-color: var(--background-color);
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+thead tr {
+  background: var(--primary-color);
+  color: var(--text-primary-contrast);
+  text-align: left;
+}
+
+th {
+  padding: 12px 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+tbody tr:hover {
+  background: var(--hover-bg);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table::-webkit-scrollbar {
+  height: 8px;
+}
+
+table::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+table::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}

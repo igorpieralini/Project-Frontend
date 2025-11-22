@@ -1,1 +1,3 @@
-@import url('../../../../../public/styles/theme.css');
+html, body{
+   background-color: var(--background-color);
+}

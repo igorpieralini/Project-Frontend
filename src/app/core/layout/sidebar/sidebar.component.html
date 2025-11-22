@@ -1,16 +1,28 @@
-<div class="sidebar" [class.fechada]="!sidebarAberta">
-
-  <button class="toggle-btn" (click)="toggleSidebar()">
-    ☰
-  </button>
-
+<div class="sidebar" [class.fechada]="!sidebarAberta" *ngIf="idiomaService.textos$ | async as textos">
   <nav *ngIf="sidebarAberta" class="menu">
-    <a routerLink="/funcionarios/list">Lista de Funcionários</a>
-    <a routerLink="/funcionarios/form">Cadastrar Funcionário</a>
+    <a routerLink="/funcionarios/list">{{ textos.menu.employees_list }}</a>
+    <a routerLink="/funcionarios/form">{{ textos.menu.employees_new }}</a>
   </nav>
 
-  <div *ngIf="sidebarAberta" class="logout">
-    <button>Sair</button>
+  <div *ngIf="sidebarAberta" class="idioma">
+    <h3>{{ textos.menu.language }}</h3>
+    <div class="opcoes">
+      <div class="circulo idioma-br" (click)="setLanguage('pt-br')"></div>
+      <div class="circulo idioma-us" (click)="setLanguage('en-us')"></div>
+      <div class="circulo idioma-ar" (click)="setLanguage('es-ar')"></div>
+    </div>
   </div>
 
+  <div *ngIf="sidebarAberta" class="tema">
+    <h3>{{ textos.menu.theme }}</h3>
+    <div class="opcoes">
+      <div class="circulo tema-dark-purple" (click)="setTheme('dark-purple')"></div>
+      <div class="circulo tema-dark" (click)="setTheme('dark')"></div>
+      <div class="circulo tema-white" (click)="setTheme('white')"></div>
+    </div>
+  </div>
+
+  <div *ngIf="sidebarAberta" class="logout">
+    <button (click)="logout()">{{ textos.menu.logout }}</button>
+  </div>
 </div>
