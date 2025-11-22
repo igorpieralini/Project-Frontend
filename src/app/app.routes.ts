@@ -24,13 +24,13 @@ export const routes: Routes = [
         path: 'form',
         loadComponent: () =>
           import('./features/funcionarios/form/funcionarios-form.component')
-            .then(m => m.FuncionariosFormComponent)
+            .then(m => m.FuncionarioFormComponent)
       },
       {
         path: 'editar/:id',
         loadComponent: () =>
           import('./features/funcionarios/form/funcionarios-form.component')
-            .then(m => m.FuncionariosFormComponent)
+            .then(m => m.FuncionarioFormComponent)
       },
       { path: '', redirectTo: 'list', pathMatch: 'full' }
     ]

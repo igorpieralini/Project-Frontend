@@ -18,7 +18,19 @@ export class FuncionariosService {
     return this.http.get<Funcionario[]>(this.api);
   }
 
-  toggle() {
+  obterPorId(id: number): Observable<Funcionario> {
+    return this.http.get<Funcionario>(`${this.api}/${id}`);
+  }
+
+  cadastrar(func: Funcionario): Observable<any> {
+    return this.http.post(this.api, func);
+  }
+
+  atualizar(func: Funcionario): Observable<any> {
+    return this.http.put(`${this.api}/${func.id}`, func);
+  }
+
+  toggleSidebar() {
     this._aberta.next(!this._aberta.value);
   }
 

@@ -1,3 +1,146 @@
-html, body{
-   background-color: var(--background-color);
+.form-principal {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 89.5vh;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.form-principal.com-sidebar,
+.form-principal.sem-sidebar {
+  width: 100%;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--text-secondary);
+  font-weight: bold;
+  z-index: 1;
+}
+
+.circle.active {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.line {
+  flex: 1;
+  height: 4px;
+  background-color: var(--border-color);
+  margin: 0 -2px;
+  z-index: 0;
+}
+
+.line.active {
+  background-color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+fieldset legend {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+label {
+  width: 150px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+}
+
+.buttons-bottom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  animation: slide-in 0.3s ease-out, fade-out 0.5s ease forwards;
+}
+
+.toast.success {
+  background-color: #4CAF50;
+}
+
+.toast.error {
+  background-color: var(--error-color);
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
 }

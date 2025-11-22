@@ -20,6 +20,6 @@ export class LayoutComponent {
   }
 
   toggleSidebar() {
-    this.funcionariosService.toggle();
+    this.funcionariosService.toggleSidebar();
   }
 }

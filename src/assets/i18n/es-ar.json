@@ -36,6 +36,13 @@
     "state": "Provincia",
     "cep": "Código Postal"
   },
+  "form": {
+    "personal_data": "Datos Personales",
+    "contract_data": "Contrato y Salario",
+    "education_data": "Formación y Cursos",
+    "address_data": "Dirección",
+    "save_button": "Guardar"
+  },
   "footer": {
     "text": "2025 Sistema de Gestión. Todos los derechos reservados."
   }
