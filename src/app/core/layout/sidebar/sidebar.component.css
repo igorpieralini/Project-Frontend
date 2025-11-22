@@ -1,0 +1,99 @@
+.sidebar {
+  width: 250px;
+  height: 46.2vw;
+  background: var(--sidebar-bg);
+  color: var(--text-primary);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: transform 0.45s ease, opacity 0.3s ease;
+  transform: translateX(0);
+  opacity: 1;
+  margin-right: 1vw;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.sidebar.fechada {
+  transform: translateX(-270px);
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 0;
+  color: var(--text-color);
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, padding-left 0.25s ease;
+}
+
+.menu a:hover {
+  color: var(--primary-color);
+  padding-left: 6px;
+}
+
+h3 {
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.opcoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.circulo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-size: cover;
+  background-position: center;
+}
+
+.tema-dark-purple { background-color: #9A6BFF; }
+.tema-dark { background-color: #1E1E1E; }
+.tema-white { background-color: #FFFFFF; }
+
+.idioma-br { background-image: url('https://flagcdn.com/w40/br.png'); }
+.idioma-us { background-image: url('https://flagcdn.com/w40/us.png'); }
+.idioma-ar { background-image: url('https://flagcdn.com/w40/ar.png'); }
+
+.logout {
+  margin-top: auto;
+}
+
+.logout button {
+  width: 100%;
+  padding: 12px;
+  background: var(--error-color);
+  border: none;
+  border-radius: 6px;
+  color: var(--text-primary-contrast);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logout button:hover {
+  background: var(--error-color);
+  filter: brightness(1.15);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}

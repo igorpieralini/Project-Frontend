@@ -1,11 +1,8 @@
-<div class="layout">
-  <app-sidebar></app-sidebar>
+<app-header (toggleSidebarEvent)="toggleSidebar()"></app-header>
 
-  <div class="content-area">
-    <app-header></app-header>
-
-    <main class="main-content">
-      <router-outlet></router-outlet>
-    </main>
-  </div>
+<div class="container">
+  <main [ngClass]="{'main-content': true, 'sidebar-aberta': sidebarAberta}">
+    <app-sidebar [sidebarAberta]="sidebarAberta"></app-sidebar>
+    <router-outlet></router-outlet>
+  </main>
 </div>

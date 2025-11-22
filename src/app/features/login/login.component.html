@@ -1,10 +1,23 @@
-<div class="login-container">
-  <h2>Login</h2>
+<main *ngIf="idiomaService.textos$ | async as textos">
+  <section class="login-wrapper">
+    <div class="login-container">
+      <h2>{{ textos.login.title }}</h2>
 
-  <input [(ngModel)]="email" placeholder="Email" />
-  <input [(ngModel)]="senha" placeholder="Senha" type="password" />
+      <form (ngSubmit)="entrar()">
+        <div class="form-group">
+          <label>{{ textos.login.email }}</label>
+          <input type="email" [(ngModel)]="email" name="email" required />
+        </div>
 
-  <button (click)="entrar()">Entrar</button>
+        <div class="form-group">
+          <label>{{ textos.login.password }}</label>
+          <input type="password" [(ngModel)]="senha" name="senha" required />
+        </div>
 
-  <p class="erro" *ngIf="erro">{{ erro }}</p>
-</div>
+        <button type="submit">{{ textos.login.button }}</button>
+      </form>
+
+      <p class="erro" *ngIf="erro">{{ textos.login.error }}</p>
+    </div>
+  </section>
+</main>

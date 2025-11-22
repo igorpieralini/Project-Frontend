@@ -1,0 +1,49 @@
+{
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Senha",
+    "button": "Entrar",
+    "error": "Email ou senha incorretos."
+  },
+  "menu": {
+    "employees_list": "Lista de Funcionários",
+    "employees_new": "Cadastrar Funcionário",
+    "language": "Idioma",
+    "theme": "Tema",
+    "logout": "Sair",
+    "project_name": "PROJECT"
+  },
+  "employees": {
+    "title": "Lista de Funcionários",
+    "id": "ID",
+    "name": "Nome",
+    "role": "Cargo",
+    "cpf": "CPF",
+    "rg": "RG",
+    "birth": "Data Nasc.",
+    "email": "Email",
+    "phone": "Telefone",
+    "salary": "Salário",
+    "benefits": "Benefícios",
+    "education": "Formação",
+    "courses": "Cursos",
+    "hiring": "Contratação",
+    "firing": "Demissão",
+    "contract_type": "Tipo Contrato",
+    "address": "Endereço",
+    "city": "Cidade",
+    "state": "Estado",
+    "cep": "CEP"
+  },
+  "form": {
+    "personal_data": "Dados Pessoais",
+    "contract_data": "Contrato e Salário",
+    "education_data": "Formação e Cursos",
+    "address_data": "Endereço",
+    "save_button": "Salvar"
+  },
+  "footer": {
+    "text": "2025 Sistema de Gestão. Todos os direitos reservados."
+  }
+}
