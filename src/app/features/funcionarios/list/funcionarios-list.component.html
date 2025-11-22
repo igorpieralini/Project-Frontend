@@ -1,55 +1,64 @@
-<div *ngIf="idiomaService.textos$ | async as textos">
+<div
+  class="table-principal"
+  [ngClass]="sidebarAberta ? 'com-sidebar' : 'sem-sidebar'"
+  *ngIf="idiomaService.textos$ | async as textos">
 
-  <h2>{{ textos.employees.title }}</h2>
+<h2 id="title">{{ textos.employees.title }}</h2>
 
-  <table>
-    <thead>
-    <tr>
-      <th>{{ textos.employees.id }}</th>
-      <th>{{ textos.employees.name }}</th>
-      <th>{{ textos.employees.role }}</th>
-      <th>{{ textos.employees.cpf }}</th>
-      <th>{{ textos.employees.rg }}</th>
-      <th>{{ textos.employees.birth }}</th>
-      <th>{{ textos.employees.email }}</th>
-      <th>{{ textos.employees.phone }}</th>
-      <th>{{ textos.employees.salary }}</th>
-      <th>{{ textos.employees.benefits }}</th>
-      <th>{{ textos.employees.education }}</th>
-      <th>{{ textos.employees.courses }}</th>
-      <th>{{ textos.employees.hiring }}</th>
-      <th>{{ textos.employees.firing }}</th>
-      <th>{{ textos.employees.contract_type }}</th>
-      <th>{{ textos.employees.address }}</th>
-      <th>{{ textos.employees.city }}</th>
-      <th>{{ textos.employees.state }}</th>
-      <th>{{ textos.employees.cep }}</th>
-    </tr>
-    </thead>
+  <div class="table-container">
+    <div class="scroll-wrapper">
+      <div class="scroll-inner">
+        <table>
+          <thead>
+          <tr>
+            <th>{{ textos.employees.id }}</th>
+            <th>{{ textos.employees.name }}</th>
+            <th>{{ textos.employees.role }}</th>
+            <th>{{ textos.employees.cpf }}</th>
+            <th>{{ textos.employees.rg }}</th>
+            <th>{{ textos.employees.birth }}</th>
+            <th>{{ textos.employees.email }}</th>
+            <th>{{ textos.employees.phone }}</th>
+            <th>{{ textos.employees.salary }}</th>
+            <th>{{ textos.employees.benefits }}</th>
+            <th>{{ textos.employees.education }}</th>
+            <th>{{ textos.employees.courses }}</th>
+            <th>{{ textos.employees.hiring }}</th>
+            <th>{{ textos.employees.firing }}</th>
+            <th>{{ textos.employees.contract_type }}</th>
+            <th>{{ textos.employees.address }}</th>
+            <th>{{ textos.employees.city }}</th>
+            <th>{{ textos.employees.state }}</th>
+            <th>{{ textos.employees.cep }}</th>
+          </tr>
+          </thead>
 
-    <tbody>
-    <tr *ngFor="let f of funcionarios">
-      <td>{{ f.id }}</td>
-      <td>{{ f.nome }}</td>
-      <td>{{ f.cargo }}</td>
-      <td>{{ f.cpf }}</td>
-      <td>{{ f.rg }}</td>
-      <td>{{ f.dataNascimento }}</td>
-      <td>{{ f.email }}</td>
-      <td>{{ f.telefone }}</td>
-      <td>{{ f.salario }}</td>
-      <td>{{ f.beneficios }}</td>
-      <td>{{ f.formacao }}</td>
-      <td>{{ f.cursos }}</td>
-      <td>{{ f.dataContratacao }}</td>
-      <td>{{ f.dataDemissao }}</td>
-      <td>{{ f.tipoContrato }}</td>
-      <td>{{ f.endereco }}</td>
-      <td>{{ f.cidade }}</td>
-      <td>{{ f.estado }}</td>
-      <td>{{ f.cep }}</td>
-    </tr>
-    </tbody>
-  </table>
+          <tbody>
+          <tr *ngFor="let f of funcionarios">
+            <td>{{ f.id }}</td>
+            <td>{{ f.nome }}</td>
+            <td>{{ f.cargo }}</td>
+            <td>{{ f.cpf }}</td>
+            <td>{{ f.rg }}</td>
+            <td>{{ f.dataNascimento }}</td>
+            <td>{{ f.email }}</td>
+            <td>{{ f.telefone }}</td>
+            <td>{{ f.salario }}</td>
+            <td>{{ f.beneficios }}</td>
+            <td>{{ f.formacao }}</td>
+            <td>{{ f.cursos }}</td>
+            <td>{{ f.dataContratacao }}</td>
+            <td>{{ f.dataDemissao }}</td>
+            <td>{{ f.tipoContrato }}</td>
+            <td>{{ f.endereco }}</td>
+            <td>{{ f.cidade }}</td>
+            <td>{{ f.estado }}</td>
+            <td>{{ f.cep }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 </div>

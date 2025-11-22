@@ -36,6 +36,13 @@
     "state": "State",
     "cep": "Postal Code"
   },
+  "form": {
+    "personal_data": "Personal Data",
+    "contract_data": "Contract & Salary",
+    "education_data": "Education & Courses",
+    "address_data": "Address",
+    "save_button": "Save"
+  },
   "footer": {
     "text": "2025 Management System. All rights reserved."
   }

@@ -30,7 +30,7 @@
 .menu a {
   display: block;
   padding: 12px 0;
-  color: var(--text-primary);
+  color: var(--text-color);
   font-size: 16px;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -81,16 +81,19 @@ h3 {
 .logout button {
   width: 100%;
   padding: 12px;
-  background: var(--danger-color);
+  background: var(--error-color);
   border: none;
   border-radius: 6px;
-  color: var(--text-primary);
+  color: var(--text-primary-contrast);
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.25s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .logout button:hover {
-  opacity: 0.8;
-  transform: scale(1.03);
+  background: var(--error-color);
+  filter: brightness(1.15);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }

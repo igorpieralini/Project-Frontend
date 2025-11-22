@@ -36,6 +36,13 @@
     "state": "Estado",
     "cep": "CEP"
   },
+  "form": {
+    "personal_data": "Dados Pessoais",
+    "contract_data": "Contrato e Salário",
+    "education_data": "Formação e Cursos",
+    "address_data": "Endereço",
+    "save_button": "Salvar"
+  },
   "footer": {
     "text": "2025 Sistema de Gestão. Todos os direitos reservados."
   }
