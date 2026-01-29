@@ -1,80 +1,111 @@
-# Angular Frontend Project
+# Frontend Angular - Project
 
-Este projeto foi gerado utilizando o [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.10. O objetivo do projeto é **estudo de Angular e Spring Boot (Java)**, criando um sistema simples de integração com Backend e Frontend separados, **utilizando MySQL como banco de dados**.
+Frontend developed with **Angular 20** for studying Spring Boot integration. Modern interface with authentication system and employee CRUD.
 
-O sistema inclui:
+## 🚀 Features
 
-* Sistema de Login
-* Sistema de consulta de funcionários
-* Sistema de adicionar funcionários
-* Sistema de remoção de funcionários
+- ✅ Login system with authentication
+- ✅ Employee listing
+- ✅ Employee registration
+- ✅ Employee editing
+- ✅ Employee deletion
+- ✅ Multi-language support (PT-BR, EN-US, ES-AR)
+- ✅ Light/dark theme
 
 ---
 
-## 🚀 Iniciando o Servidor de Desenvolvimento / Build do Projeto
+## 📋 Prerequisites
 
-Para rodar o projeto localmente e acompanhar as alterações em tempo real:
+- Node.js 18+
+- npm 9+
+- Angular CLI 20+
+
+---
+
+## ⚙️ Setup
+
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/igorpieralini/Project-FrontEnd.git
+cd Project-FrontEnd
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment (optional)
+
+The environment file is located at `src/environments/environment.ts`:
+
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8080/api'
+};
+```
+
+---
+
+## ▶️ Running the Project
+
+### Development server:
+
+```bash
+npm start
+# or
 ng serve
 ```
 
-Em seguida, abra seu navegador em:
+Access: **http://localhost:4200**
 
-```
-http://localhost:4200/
-```
-
-Para gerar o build de produção otimizado para performance e tamanho mínimo:
+### Production build:
 
 ```bash
 ng build
 ```
 
-Os arquivos compilados serão armazenados na pasta `dist/`.
+Files will be generated in the `dist/` folder.
 
 ---
 
-## 🏗️ Estrutura do Projeto
-
-Segue a estrutura principal do frontend:
+## 🏗️ Project Structure
 
 ```
-frontend/
- ├─ .angular/
- ├─ node_modules/
- ├─ public/
- │   ├─ styles/
- │   └─ favicon.ico
- └─ src/
-     ├─ app/
-     │   ├─ core/
-     │   ├─ features/
-     │   └─ shared/
-     ├─ environments/
-     └─ index.html
+Project-FrontEnd/
+├── src/
+│   ├── app/
+│   │   ├── core/              # Guards, interceptors, core services
+│   │   │   ├── guards/        # Auth guard and interceptor
+│   │   │   └── layout/        # Layout, header, sidebar
+│   │   ├── features/          # Feature modules
+│   │   │   ├── funcionarios/  # Employee CRUD
+│   │   │   └── login/         # Login screen
+│   │   └── services/          # Global services (theme, language)
+│   ├── assets/
+│   │   └── i18n/              # Translation files
+│   ├── environments/          # Environment settings
+│   └── styles/                # Global styles and themes
+├── package.json
+└── README.md
 ```
-
-Essa organização permite separar claramente módulos centrais (`core`), funcionalidades (`features`) e componentes compartilhados (`shared`).
 
 ---
 
-## 💻 Rodando o Projeto com Git
+## 🔗 Backend
 
-Para clonar e executar este projeto, utilize os comandos abaixo:
+The corresponding Spring Boot backend is available at:
+[Project-Backend](https://github.com/igorpieralini/Project-Backend)
 
-```bash
-# Clonar o repositório
-git clone https://github.com/igorpieralini/Project-Frontend.git
+**⚠️ The backend must be running at `http://localhost:8080` for the application to work properly.**
 
-# Entrar na pasta do projeto
-cd Project-Frontend
+---
 
-# Instalar dependências
-npm install
+## 👨‍💻 Developer
 
-# Rodar o servidor de desenvolvimento
-ng serve
-```
+**Igor Pieralini**
 
-Desenvolvedor: **Igor Pieralini**
+- GitHub: [@igorpieralini](https://github.com/igorpieralini)
